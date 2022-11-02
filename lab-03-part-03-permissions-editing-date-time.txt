@@ -17,15 +17,23 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 
 What command did you use, and what was its output?
 ----------
+date
 
-
+Wed Nov  2 18:13:45
 
 ==========
 2. Print out a calendar for this month.
 
 What command did you use, and what was its output?
 ----------
-
+cal  
+November 2022      
+Su Mo Tu We Th Fr Sa  
+       1  2  3  4  5  
+ 6  7  8  9 10 11 12  
+13 14 15 16 17 18 19  
+20 21 22 23 24 25 26  
+27 28 29 30           
 
 
 ==========
@@ -34,7 +42,7 @@ What command did you use, and what was its output?
 What commands did you use to do this?
 ----------
 
-
+cd ~
 
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
@@ -42,7 +50,7 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
+touch copy_to_backup.sh
 
 ==========
 5. What are the permissions on your copy_to_backup.sh.
@@ -50,14 +58,14 @@ What commands did you use to do this?
 What command did you use to find the permissions?
 ----------
 
-
+-rw-r--r-- 
 
 ==========
 6. Change the permissions so that this file is executable by the user.  Verify the new permissions.
 
 What commands did you use to do this?  What was the output?
 ----------
-
+chmod u+x copy_to_backup.sh
 
 
 ==========
@@ -67,7 +75,7 @@ $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
-
+nothing
 
 
 ==========
@@ -76,7 +84,7 @@ What command did you use to try to execute the file?  What happens?
 What command did you use to do this?
 ----------
 
-
+nano copy_to_backup.sh
 
 ==========
 9. In your file, write the following commands:
@@ -88,7 +96,10 @@ c. print out "I'm done backing up"
 Write out the code in your file below...
 ----------
 
-
+#!/bin/bash
+mkdir ~/backup   
+cp *.txt ~/backup
+echo "I'm done backing up"
 
 ==========
 10. Create a directory in your home called test
@@ -99,7 +110,7 @@ Write out the code in your file below...
 What commands did you use to do this?
 ----------
 
-
+touch 1.txt 2.txt
 
 ==========
 12. Move the script that you created into this directory.
